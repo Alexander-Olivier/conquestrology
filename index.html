@@ -15,7 +15,8 @@
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html, body { height: 100%; }
+html { height: 100%; }
+body { min-height: 100%; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.2rem; line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 h1, h2, h3, p, ul, blockquote { margin: 0; }
@@ -87,7 +88,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- result ---------- */
 .r-grid, .r-side, .reading { display: grid; gap: 18px; min-width: 0; }
-.r-hero { display: grid; gap: 14px; justify-items: start; min-width: 0; padding-bottom: 20px; border-bottom: 1px solid var(--gold); }
+.r-hero { display: grid; gap: 14px; justify-items: start; min-width: 0; padding-bottom: 28px; }
+.r-lead { color: var(--fg2); font-style: italic; font-size: 1.15rem; line-height: 1.35; }
 .r-head { display: grid; grid-template-columns: 56px 1fr; gap: 12px; align-items: center; }
 .r-head h1 { font-family: var(--display); font-size: clamp(1.1rem, 4.6vw, 1.45rem); font-weight: 400; letter-spacing: 0.04em; line-height: 1.12; }
 .r-roast { font-family: var(--display); font-size: clamp(2rem, 8.2vw, 3.7rem); line-height: 1.1; letter-spacing: 0.01em; color: var(--fg); text-wrap: balance; max-width: 1060px; }
@@ -116,12 +118,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .part h2 { font-family: var(--display); font-size: 1.7rem; letter-spacing: 0.06em; }
 .part p { color: var(--fg2); font-style: italic; font-size: 1.15rem; }
 .sec { display: grid; gap: 8px; }
-.bed { display: grid; gap: 14px; }
-.bed-pic { border: 1px solid var(--gold); background: var(--paper); padding: 4px; aspect-ratio: 1; }
-.bed-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bed-top { display: grid; gap: 12px; align-content: center; min-width: 0; }
-.bed blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 6vw, 2.5rem); line-height: 1.14; letter-spacing: 0.01em; color: var(--fg); text-wrap: balance; }
-.bed p { font-size: 1.2rem; max-width: 64ch; }
 .sec h3 { font-family: var(--display); font-size: 1.05rem; letter-spacing: 0.16em; text-transform: uppercase; }
 .sec p { font-size: 1.2rem; max-width: 64ch; }
 .sec p + p { margin-top: 6px; }
@@ -206,6 +202,66 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rel-wrap { display: grid; gap: 12px; border-top: 1px solid var(--gold); padding-top: 18px; }
 .note, .sec small { color: var(--fg2); font-style: italic; font-size: 1.02rem; display: block; line-height: 1.3; }
 .r-end { display: grid; gap: 18px; border-top: 1px solid var(--gold); padding-top: 22px; }
+/* ---------- result: chapters, progress bar ---------- */
+#view-result.page { padding-top: 0; }
+.page > .rbar { position: sticky; top: var(--hdr, 61px); z-index: 4; }
+.rbar { background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper), 0 1px 0 100vmax var(--gold); clip-path: inset(0 -100vmax -1px); }
+.rbar-in { display: grid; gap: 7px; padding: 9px 0 10px; }
+.rbar-where { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.rbar-where > .caps, #rb-of { display: none; }
+.rbar-where b { display: flex; gap: 7px; align-items: baseline; min-width: 0; font-family: var(--display); font-weight: 400; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rbar-where em, .rbar-segs em { font-style: normal; color: var(--gold-ink); letter-spacing: 0.06em; }
+.rbar-in { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+.rbar-count { color: var(--fg2); grid-row: 1; grid-column: 2; }
+.rbar-segs { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+.rbar-segs button { display: block; width: 100%; background: none; border: 0; padding: 4px 0; margin: 0; cursor: pointer; text-align: left; color: var(--fg2); }
+.rbar-segs .trk { display: block; height: 4px; background: var(--gold-soft); overflow: hidden; }
+.rbar-segs li.cur .trk { height: 6px; margin-top: -1px; }
+.rbar-segs .fil { display: block; height: 100%; width: 0; background: var(--gold-ink); transition: width 0.25s ease-out; }
+.rbar-segs span { display: none; }
+.rbar-segs button:focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 2px; }
+.band { display: grid; gap: 30px; padding: 44px 0 52px; min-width: 0; background: var(--band, var(--bg)); box-shadow: 0 0 0 100vmax var(--band, var(--bg)); clip-path: inset(0 -100vmax); scroll-margin-top: calc(var(--hdr, 61px) + var(--rbar, 56px) + 8px); }
+.glance { --band: var(--paper); border-top: 1px solid var(--gold); }
+.ch-love, .ch-rel { --band: var(--paper); }
+.ch-year { --band: var(--tint); }
+.ch-sex { --band: #221d16; --fg: #f4eee1; --fg2: #d4c6a5; --gold-ink: #c9a865; color: var(--fg); }
+.ch-sex .sec p { color: var(--fg); }
+.ch-open { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 18px; align-items: center; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); padding: 20px 0 16px; }
+.ch-num { font-family: var(--display); font-size: clamp(2.6rem, 10vw, 4rem); line-height: 1; color: var(--gold-ink); }
+.ch-open h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.75rem, 6.6vw, 2.5rem); line-height: 1.1; letter-spacing: 0.01em; margin-top: 4px; }
+.ch-open p { color: var(--fg2); font-style: italic; font-size: 1.12rem; line-height: 1.3; margin-top: 4px; }
+.st { display: grid; gap: 3px; }
+.st h3, .sec .st h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.4rem, 5vw, 1.65rem); letter-spacing: 0.01em; text-transform: none; line-height: 1.15; color: var(--fg); }
+.sec { gap: 12px; }
+.sec .traits { margin-top: 2px; }
+.rstats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
+.rstats > div { border-left: 1px solid var(--gold); padding: 0 12px 0 14px; display: grid; gap: 3px; align-content: start; }
+.rstats b { font-family: var(--num); font-weight: 700; font-size: 2.2rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.rstats p { color: var(--fg2); font-size: 1.02rem; line-height: 1.3; }
+.glance .mapcard.chart { width: 100%; }
+.bed { gap: 18px; }
+.bed-row { display: grid; gap: 18px; }
+.bed-pic { border: 1px solid var(--gold); background: var(--paper); padding: 4px; aspect-ratio: 1; }
+.bed-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bed-top { display: grid; gap: 12px; align-content: center; min-width: 0; }
+.bed blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 6vw, 2.2rem); line-height: 1.16; letter-spacing: 0.01em; text-wrap: balance; }
+.bed p { font-size: 1.2rem; max-width: 64ch; }
+.home { display: grid; gap: 22px; }
+.home > .pic { border: 1px solid var(--gold); background: var(--paper); padding: 4px; aspect-ratio: 1; }
+.home > .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.home-list { display: grid; }
+.home-list .sec + .sec { border-top: 1px solid var(--gold); padding-top: 20px; margin-top: 20px; }
+.now { background: var(--paper); border: 1px solid var(--gold); padding: 18px 20px 20px; }
+.now blockquote { border-left: 0; padding: 0; }
+.ch-year .situ { background: var(--paper); }
+.ch-year .rel-wrap, .ch-rel .rel-wrap { border-top: 0; padding-top: 0; }
+@media (max-width: 899px) {
+  .r-grid { gap: 0; }
+  .reading { display: contents; }
+  .r-hero { order: -2; padding-top: 18px; }
+  .r-side { order: -1; justify-items: center; padding-bottom: 36px; }
+  .r-side .card { max-width: 340px; }
+}
 @media (min-width: 620px) { .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 900px) and (max-height: 900px) { .r-side .card { max-width: 310px; } }
 @media (min-width: 900px) and (max-height: 780px) { .r-side .card { max-width: 260px; } }
@@ -285,7 +341,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .sw-arrow:disabled { opacity: 0.3; cursor: default; }
 }
 @keyframes sc-float { 50% { transform: translateY(-6px); } }
-@media (min-width: 1200px) { .bed { grid-template-columns: 240px minmax(0, 1fr); gap: 18px 22px; } .bed h3, .bed p { grid-column: 1 / -1; } }
 @media (prefers-reduced-motion: reduce) { .wheel { animation: none; } .fc { transition: none; } .sc.cur .sc-in { animation: none; } }
 @media (max-width: 420px) { .twelve { grid-template-columns: repeat(4, minmax(0, 1fr)); } .rel { grid-template-columns: 1fr; } }
 
@@ -310,16 +365,31 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .chapter { max-width: 560px; margin: 0 auto; }
   .chapter .btn, .actions .btn { width: auto; min-width: 300px; justify-self: center; }
   .actions { justify-items: center; }
-  .r-grid { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 40px; align-items: start; }
-  .r-side { position: sticky; top: 76px; }
+  .r-grid { grid-template-columns: 320px minmax(0, 1fr); gap: 48px; align-items: start; padding-top: 28px; }
+  .r-side { position: sticky; top: calc(var(--hdr, 61px) + var(--rbar, 64px) + 24px); }
+  .reading { gap: 0; }
+  .r-hero { padding: 0 40px 40px; }
+  .band { padding: 52px 40px 60px; box-shadow: none; clip-path: none; }
+  .rbar-in { grid-template-columns: 190px minmax(0, 1fr); gap: 0 28px; padding: 12px 0 10px; }
+  .rbar-where { flex-direction: column; gap: 2px; align-items: flex-start; }
+  .rbar-where > .caps, #rb-of { display: block; }
+  .rbar-where b { font-size: 1.05rem; letter-spacing: 0.02em; text-transform: none; }
+  #rb-num, #rb-title, .rbar-count { display: none; }
+  .rbar-segs { grid-column: auto; gap: 14px; }
+  .rbar-segs span { display: flex; gap: 6px; margin-top: 8px; font-family: var(--display); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.25; }
+  .rbar-segs li.cur button, .rbar-segs li.done button { color: var(--fg); }
+  .rbar-segs button:hover { color: var(--fg); }
+  .rstats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .bed-row { grid-template-columns: 300px minmax(0, 1fr); gap: 30px; align-items: center; }
+  .home { grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: start; }
   .paper { padding: 36px 40px; }
   .reading { gap: 32px; }
   .sheet { gap: 32px; }
   .boxes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
   .box { grid-template-columns: 1fr; }
   .box .f { width: 58px; }
-  .sec.illus { grid-template-columns: 220px minmax(0, 1fr); gap: 22px; align-items: start; }
-  .sec.illus.flip-side { grid-template-columns: minmax(0, 1fr) 220px; }
+  .sec.illus { grid-template-columns: 300px minmax(0, 1fr); gap: 30px; align-items: start; }
+  .sec.illus.flip-side { grid-template-columns: minmax(0, 1fr) 300px; }
   .sec.illus.flip-side .pic { order: 2; }
   .situ { padding: 22px 24px; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; }
   .situ .yr { font-size: 2.6rem; }
@@ -750,16 +820,60 @@ button { font: inherit; color: inherit; cursor: pointer; }
     return { sun: D.findMoment(tk[0], mk[0], stt), moon: D.findMoment(tk[1], mk[0], stt), rising: D.findMoment(tk[0], mk[1], stt), now: now };
   }
 
+  var CHAPTERS = [
+    ["I", "one", "The sign", "Your coat of arms", "Who you are in any year, whatever the year is doing to you."],
+    ["II", "two", "Love", "Affairs of state", "Love, and the treaties in between."],
+    ["III", "three", "Sex", "After dark", "What happens after the treaty is signed."],
+    ["IV", "four", "Life", "The home front", "Friends, work and money, run like a small empire."],
+    ["V", "five", "Compatibility", "Foreign relations", "Who you sign treaties with, and who you never seat together."],
+    ["VI", "six", "Your situation", "The year {yr}", "Your sign stays with you. This is the year you happen to be in."]
+  ];
+  function st(label, title) { return '<div class="st"><span class="caps">' + label + "</span><h3>" + title + "</h3></div>"; }
+  function sec(label, title, body, pic, flip) {
+    var ps = (Array.isArray(body) ? body : [body]).map(function (p) { return "<p>" + p + "</p>"; }).join("");
+    if (!pic) return '<section class="sec">' + st(label, title) + ps + "</section>";
+    return '<section class="sec illus' + (flip ? " flip-side" : "") + '"><div class="pic"><img src="' + pic + '" alt="" loading="lazy" onerror="var s=this.parentNode.parentNode; s.classList.remove(\'illus\'); this.parentNode.remove()"></div><div class="txt">' + st(label, title) + ps + "</div></section>";
+  }
   function bedSec(e) {
     var b = (window.EMPIRE_BED || {})[e.id];
     if (!b) return "";
-    return '<section class="sec bed"><h3>In bed</h3><div class="bed-pic"><img src="art/bed/' + e.id + '.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"></div><div class="bed-top"><span class="caps">Your kink: ' + b.kink + "</span><blockquote>&ldquo;" + b.quote + "&rdquo;</blockquote></div><p>" + b.text + "</p></section>";
+    return '<section class="sec bed"><div class="bed-row"><div class="bed-pic"><img src="art/bed/' + e.id + '.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"></div><div class="bed-top">' + st("In bed", "Behind closed borders") + '<span class="caps">Your kink: ' + b.kink + "</span><blockquote>&ldquo;" + b.quote + "&rdquo;</blockquote></div></div><p>" + b.text + "</p></section>";
   }
-  function sec(title, body, pic, flip) {
-    var ps = (Array.isArray(body) ? body : [body]).map(function (p) { return "<p>" + p + "</p>"; }).join("");
-    if (!pic) return '<section class="sec"><h3>' + title + "</h3>" + ps + "</section>";
-    return '<section class="sec illus' + (flip ? " flip-side" : "") + '"><div class="pic"><img src="' + pic + '" alt="" onerror="var s=this.parentNode.parentNode; s.classList.remove(\'illus\'); this.parentNode.remove()"></div><div class="txt"><h3>' + title + "</h3>" + ps + "</div></section>";
+  function chapter(i, cls, yr, inner) {
+    var c = CHAPTERS[i];
+    return '<section class="band ch ' + cls + '" id="ch-' + (i + 1) + '" data-n="' + (i + 1) + '"><header class="ch-open"><span class="ch-num" aria-hidden="true">' + c[0] + '</span><div><span class="caps">Chapter ' + c[1] + " · " + c[2] + "</span><h2>" + c[3].replace("{yr}", yr) + "</h2><p>" + c[4] + "</p></div></header>" + inner + "</section>";
   }
+  function rbarHtml(yr) {
+    return '<nav class="rbar" id="rbar" aria-label="Chapters of your reading"><div class="rbar-in"><div class="rbar-where"><span class="caps">Your reading</span><b><em id="rb-num"></em><span id="rb-title">Your card</span><span id="rb-of">Your card</span></b></div><ol class="rbar-segs">' +
+      CHAPTERS.map(function (c, i) { var t = c[3].replace("{yr}", yr); return '<li><button type="button" data-n="' + (i + 1) + '" aria-label="Chapter ' + c[0] + ": " + esc(t) + '"><i class="trk"><i class="fil"></i></i><span><em>' + c[0] + "</em>" + t + "</span></button></li>"; }).join("") +
+      '</ol><span class="caps rbar-count" id="rb-count"></span></div></nav>';
+  }
+  function stickVars() {
+    var root = document.documentElement, bar = document.querySelector(".bar"), rb = $("rbar");
+    root.style.setProperty("--hdr", (bar ? bar.offsetHeight : 60) + "px");
+    if (rb) root.style.setProperty("--rbar", rb.offsetHeight + "px");
+  }
+  var rbTick = false;
+  function rbarUpdate() {
+    rbTick = false;
+    var rb = $("rbar"); if (state.view !== "result" || !rb) return;
+    var chs = document.querySelectorAll("#view-result .ch"), off = rb.getBoundingClientRect().bottom + 24, cur = -1, frac = 0;
+    chs.forEach(function (c, i) { var r = c.getBoundingClientRect(); if (r.top <= off) { cur = i; frac = Math.min(1, Math.max(0, (off - r.top) / r.height)); } });
+    if (cur >= 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) { cur = chs.length - 1; frac = 1; }
+    rb.querySelectorAll(".rbar-segs li").forEach(function (li, i) {
+      li.className = i < cur ? "done" : i === cur ? "cur" : "";
+      li.querySelector(".fil").style.width = i < cur ? "100%" : i === cur ? Math.max(4, Math.round(frac * 100)) + "%" : "0";
+      if (i === cur) li.querySelector("button").setAttribute("aria-current", "step"); else li.querySelector("button").removeAttribute("aria-current");
+    });
+    var c = CHAPTERS[cur], yr = rb.dataset.yr;
+    $("rb-num").textContent = c ? c[0] : "";
+    $("rb-title").textContent = c ? c[3].replace("{yr}", yr) : "Your card";
+    $("rb-of").textContent = c ? "Chapter " + c[0] + " of VI" : "Your card";
+    $("rb-count").textContent = c ? c[0] + " of VI" : "";
+  }
+  function rbarQueue() { if (!rbTick) { rbTick = true; requestAnimationFrame(rbarUpdate); } }
+  window.addEventListener("scroll", rbarQueue, { passive: true });
+  window.addEventListener("resize", function () { if (state.view === "result") { stickVars(); rbarQueue(); } });
   function relList(items) { return "<ul>" + items.map(function (r) { var o = r[0]; return "<li>" + flagStill(o) + "<div><b>" + o.name + ", " + momentYear(o) + "</b><span>" + r[1] + "</span></div></li>"; }).join("") + "</ul>"; }
   function showResult(res) {
     var e = res.sun, T = D.TEMPERAMENTS[e.t], M = D.MODES[e.m], art = "art/sections/" + e.id + "-", cp = compat(e), R = e.r, yr = momentYear(e);
@@ -767,51 +881,55 @@ button { font: inherit; color: inherit; cursor: pointer; }
     function traits(k, list) { return "<div><h3>" + k + "</h3><ul>" + list.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul></div>"; }
     var nowQ = (res.now || []).map(function (t) { return "<p>" + MM.NOW[t] + "</p>"; }).join("") + (e.nowLine ? "<p>" + e.nowLine + "</p>" : "");
     var backLabel = backTo === "deck" ? "Back to the deck" : "Back to all cards";
-    var h = '<div class="bgmap"></div><header class="r-hero">' +
+    var h = '<div class="bgmap"></div>' + rbarHtml(yr) + '<div class="r-grid"><aside class="r-side">' +
+      card(e, animOK() ? "flip" : "") +
+      '</aside><div class="reading"><header class="r-hero">' +
       (res.now ? "" : '<button class="backbtn" id="back-top" type="button"><span aria-hidden="true">&#8249;</span> ' + backLabel + "</button>") +
       '<div class="r-head">' + flagWave(e) + '<div><span class="caps">' + (res.now ? "Your card" : "From the deck") + '</span><h1>' + e.name + ", " + yr + "</h1></div></div>" +
       '<p class="r-roast' + (e.roast.length > 60 ? " long" : "") + '">' + e.roast.split(/(?<=[.?])\s+/).map(function (x) { return '<span class="hl">' + x + "</span>"; }).join(" ") + "</p>" +
-      '</header><div class="r-grid"><aside class="r-side">' +
-      card(e, animOK() ? "flip" : "") +
-      '</aside><div class="reading"><div class="paper sheet">' +
-      chartSlot(e, "main") +
+      '<p class="r-lead">' + T.name + " · " + M.name + " · " + (e.state === "strain" ? "Strain" : "Height") + ". Your sign, your three cards, and the year you happen to be in.</p>" +
+      '</header><section class="band glance">' + st("At a glance", "Your three cards") +
       '<div class="boxes">' +
         '<div class="box">' + flagStill(res.sun) + '<div><span class="caps">Who you are</span><b>' + res.sun.name + ", " + momentYear(res.sun) + "</b><p>" + res.sun.epithet + "</p></div></div>" +
         '<div class="box">' + flagStill(res.rising) + '<div><span class="caps">What you want</span><b>' + cap1(WANTS[res.rising.m]) + "</b><p>When nobody is watching you act like " + res.rising.name + ", " + momentYear(res.rising) + ".</p></div></div>" +
         '<div class="box">' + flagStill(res.moon) + '<div><span class="caps">What you need</span><b>' + cap1(NEEDS[res.moon.t]) + "</b><p>The card that steadies you is " + res.moon.name + ", " + momentYear(res.moon) + ". Keep one nearby.</p></div></div>" +
       "</div>" +
-      '<button class="jump" id="jump" type="button">Skip to your situation in ' + yr + "</button>" +
-      '<div class="why">' + e.stats.map(function (s) { return "<div><b>" + s[1] + "<small>" + s[0] + "</small></b><p>" + s[2] + "</p></div>"; }).join("") + "</div>" +
-      '<div class="part"><span class="caps">Part one</span><h2>Your sign</h2><p>' + e.name + ". This is who you are in any year.</p></div>" +
-      '<div class="facts">' +
-        fact("Temperament", T.name, T.line) + fact("Mode", M.name, M.line) +
-        fact("Ruled by", e.resource) + fact("Patron", e.patron) +
-        fact("Best century", e.century) + fact("Home", e.capital) +
-        fact("Lucky charm", R.lucky) + fact("Avoid", R.avoid) +
-      "</div>" +
-      sec("The sign", R.sign) +
-      '<div class="traits">' + traits("Strengths", R.strengths) + traits("Weaknesses", R.flaws) + "</div>" +
-      sec("At your best", R.best, art + "best.jpg") +
-      sec("At your worst", R.worst) +
-      sec("In love", R.love, art + "love.jpg", true) +
-      bedSec(e) +
-      sec("With friends", R.friends) +
-      sec("At work", R.work, art + "work.jpg") +
-      sec("With money", R.money) +
-      '<div class="rel-wrap"><p class="note">Compatibility goes by sign. What these empires did to each other in history does not count here.</p><div class="rel"><div><h3>Gets along with</h3>' + relList(cp.allies) + "</div><div><h3>Clashes with</h3>" + relList(cp.rivals) + "</div></div></div>" +
-      '</div><div class="paper sheet sheet2" id="situation-sheet">' +
-      '<div class="part"><span class="caps">Part two</span><h2>Your situation</h2><p>Your sign stays with you. This is the year you happen to be in.</p></div>' +
-      '<section class="sec situ"><div class="yr">' + yr + '</div><div class="open"><p>' + R.open + "</p></div></section>" +
-      chartSlot(e, "sit") +
-      sec("How you got here", R.how) +
-      sec("Who is on the map", [R.around, "<small>These are the real players of the year, which is a different question from who suits you.</small>"], art + "situation.jpg", true) +
-      '<section class="sec"><h3>In your life</h3>' + R.life.map(function (p) { return "<p>" + p + "</p>"; }).join("") + "</section>" +
-      (nowQ ? '<section class="sec now"><h3>Right now</h3><blockquote>' + nowQ + "</blockquote></section>" : "") +
-      sec("What happens next", R.next) +
-      '<div class="r-end">' +
-      (res.now ? '<div class="actions"><button class="btn" id="copy" type="button">Copy my reading</button><button class="btn ghost" id="retake" type="button">Draw again</button></div>' : '<div class="actions"><button class="btn" id="take" type="button">Which empire am I?</button><button class="btn ghost" id="back-bottom" type="button">' + backLabel + '</button></div>') +
-      '<p class="credits"><b>Flag:</b> ' + D.FLAG_CREDITS[e.flagKey].note + " " + D.FLAG_CREDITS[e.flagKey].file + ", by " + D.FLAG_CREDITS[e.flagKey].by + ", " + D.FLAG_CREDITS[e.flagKey].license + ", via Wikimedia Commons. <b>Borders:</b> drawn for " + yearOf(e) + " from the historical-basemaps dataset (GPL v3), the nearest year it offers. <b>Coastlines:</b> Natural Earth. <b>Art:</b> generated with ChatGPT. " + D.BRAND.disclaimer + "</p></div></div></div></div>";
+      '<div class="rstats">' + e.stats.map(function (s) { return '<div><b>' + s[1] + '</b><span class="caps">' + s[0] + "</span><p>" + s[2] + "</p></div>"; }).join("") + "</div>" +
+      chartSlot(e, "main") + "</section>" +
+      chapter(0, "ch-sign", yr,
+        '<div class="facts">' +
+          fact("Temperament", T.name, T.line) + fact("Mode", M.name, M.line) +
+          fact("Ruled by", e.resource) + fact("Patron", e.patron) +
+          fact("Best century", e.century) + fact("Home", e.capital) +
+          fact("Lucky charm", R.lucky) + fact("Avoid", R.avoid) +
+        "</div>" +
+        sec("The sign", "The manifesto", R.sign) +
+        '<section class="sec">' + st("Strengths and weaknesses", "Your arsenal, your weak flank") + '<div class="traits">' + traits("Strengths", R.strengths) + traits("Weaknesses", R.flaws) + "</div></section>" +
+        sec("At your best", "Your golden age", R.best, art + "best.jpg") +
+        sec("At your worst", "Decline and fall", R.worst)) +
+      chapter(1, "ch-love", yr, sec("In love", "Your love treaty", R.love, art + "love.jpg", true)) +
+      chapter(2, "ch-sex", yr, bedSec(e)) +
+      chapter(3, "ch-life", yr,
+        '<div class="home"><div class="pic"><img src="' + art + 'work.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"></div><div class="home-list">' +
+        sec("With friends", "Your allies", R.friends) + sec("At work", "The campaign", R.work) + sec("With money", "The treasury", R.money) + "</div></div>") +
+      chapter(4, "ch-rel", yr,
+        '<div class="rel-wrap"><p class="note">Compatibility goes by sign. What these empires did to each other in history does not count here.</p><div class="rel"><div><h3>Gets along with</h3>' + relList(cp.allies) + "</div><div><h3>Clashes with</h3>" + relList(cp.rivals) + "</div></div></div>") +
+      chapter(5, "ch-year", yr,
+        '<section class="sec situ"><div class="yr">' + yr + '</div><div class="open"><p>' + R.open + "</p></div></section>" +
+        chartSlot(e, "sit") +
+        sec("How you got here", "The road here", R.how) +
+        sec("Who is on the map", "The players", [R.around, "<small>These are the real players of the year, which is a different question from who suits you.</small>"], art + "situation.jpg", true) +
+        sec("In your life", "Your year, translated", R.life) +
+        (nowQ ? '<section class="sec now">' + st("Right now", "The dispatch") + "<blockquote>" + nowQ + "</blockquote></section>" : "") +
+        sec("What happens next", "The prophecy", R.next) +
+        '<div class="r-end">' +
+        (res.now ? '<div class="actions"><button class="btn" id="copy" type="button">Copy my reading</button><button class="btn ghost" id="retake" type="button">Draw again</button></div>' : '<div class="actions"><button class="btn" id="take" type="button">Which empire am I?</button><button class="btn ghost" id="back-bottom" type="button">' + backLabel + '</button></div>') +
+        '<p class="credits"><b>Flag:</b> ' + D.FLAG_CREDITS[e.flagKey].note + " " + D.FLAG_CREDITS[e.flagKey].file + ", by " + D.FLAG_CREDITS[e.flagKey].by + ", " + D.FLAG_CREDITS[e.flagKey].license + ", via Wikimedia Commons. <b>Borders:</b> drawn for " + yearOf(e) + " from the historical-basemaps dataset (GPL v3), the nearest year it offers. <b>Coastlines:</b> Natural Earth. <b>Art:</b> generated with ChatGPT. " + D.BRAND.disclaimer + "</p></div>") +
+      "</div></div>";
     $("view-result").innerHTML = h; setView("result"); chartsLoad(e);
+    $("rbar").dataset.yr = yr; stickVars(); rbarUpdate();
+    $("rbar").querySelectorAll("button[data-n]").forEach(function (b) { b.addEventListener("click", function () { var c = $("ch-" + b.dataset.n); if (c) c.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" }); }); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (state.view === "result") { stickVars(); rbarUpdate(); } });
     if (!res.now) { $("back-top").addEventListener("click", goBack); $("retake-top").hidden = true; } $("progress").style.width = "100%";
     bgMap($("view-result").querySelector(".bgmap"), e);
     try { history.replaceState(null, "", "#" + res.sun.id + "-" + res.moon.id + "-" + res.rising.id); } catch (err) {}
@@ -822,7 +940,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text); ok(); }); else { fallbackCopy(text); ok(); }
     });
     if ($("retake")) $("retake").addEventListener("click", restart);
-    $("jump").addEventListener("click", function () { $("situation-sheet").scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" }); });
   }
   function fallbackCopy(text) { var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.left = "-9999px"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); }
   function renderDeck() {
