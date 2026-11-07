@@ -1,4 +1,4 @@
-# Empirescope
+# Conquestrology
 
 Astrology, with receipts. A personality quiz that parodies zodiac signs: answer 26 questions and find out which of 24 historical empires you are, at a specific moment in its history.
 

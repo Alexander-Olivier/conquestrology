@@ -1,4 +1,4 @@
-/* Empirescope: the 24 moments.
+/* Conquestrology: the 24 moments.
    Each house (temperament x mode) has two moments: one at its height, one under strain.
    The situation questions decide which of the two you draw. Every moment has its own page:
    the geopolitics of that exact year, and the analogy with a life and a character. */

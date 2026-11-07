@@ -1,4 +1,4 @@
-// Empirescope antique map generator. usage: node gen.js <id|all> <main|sit|both> <atlas|portolan|royal> <outdir>
+// Conquestrology antique map generator. usage: node gen.js <id|all> <main|sit|both> <atlas|portolan|royal> <outdir>
 const path=require('path'),fs=require('fs');
 const LIB=path.join(__dirname,'lib'),SRC=path.join(__dirname,'..');
 const d3=require(path.join(LIB,'d3.min.js')),topo=require(path.join(LIB,'topojson-client.min.js')),pc=require(path.join(LIB,'polygon-clipping.umd.min.js'));

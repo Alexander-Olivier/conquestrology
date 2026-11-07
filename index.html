@@ -1,4 +1,4 @@
-<title>Empirescope</title>
+<title>Conquestrology</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -318,7 +318,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 </style>
 
 <div class="bar"><div class="in">
-  <button class="wordmark" id="home" type="button">Empirescope</button>
+  <button class="wordmark" id="home" type="button">Conquestrology</button>
   <div class="links"><span class="caps" id="counter" hidden></span><button class="linkish" id="retake-top" type="button" hidden>Draw again</button><button class="linkish" id="deck-link" type="button">The deck</button></div>
 </div><div class="progress" aria-hidden="true"><i id="progress"></i></div></div>
 
@@ -517,10 +517,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   function pickHero() {
     var list = D.BRAND.heroes, forced = /[?&]hero=(\d+)/.exec(location.search), last = -1, i;
     if (forced && list[+forced[1]]) return list[+forced[1]];
-    try { last = +localStorage.getItem("empirescope-hero"); } catch (err) {}
+    try { last = +localStorage.getItem("conquestrology-hero"); } catch (err) {}
     i = Math.floor(Math.random() * list.length);
     if (i === last) i = (i + 1 + Math.floor(Math.random() * (list.length - 1))) % list.length;
-    try { localStorage.setItem("empirescope-hero", String(i)); } catch (err) {}
+    try { localStorage.setItem("conquestrology-hero", String(i)); } catch (err) {}
     return list[i];
   }
   function renderIntro() {
@@ -529,7 +529,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     var cards = E.map(function (e, i) { var l = i % 3; return '<button type="button" class="fc l' + l + '" data-id="' + e.id + '" aria-label="' + esc(e.name + ", " + momentYear(e) + ". " + e.epithet) + '"><span class="fh"><b>' + e.name + "<span>" + momentYear(e) + '</span></b><img class="fl" src="flags/' + e.flagKey + '.svg" alt="" draggable="false" loading="lazy"></span><img class="fa" src="art/thumbs/' + e.id + '.jpg" alt="" draggable="false" loading="lazy" onerror="this.style.visibility=\'hidden\'"></button>'; }).join("");
     var chips = ["F", "E", "A", "W"].map(function (t) { return '<button type="button" class="chip" data-t="' + t + '" aria-pressed="false">' + D.TEMPERAMENTS[t].plural + "</button>"; }).join("");
     $("view-intro").innerHTML = '<div class="stage" id="stage">' + wheelSvg() +
-      '<div class="st-text" id="st-text"><div class="mascot"><img src="art/cards/mascot.jpg" alt="An owl with a spyglass, the Empirescope mascot" onerror="this.parentNode.remove()"></div><h1 class="' + (hero.h1.length > 46 ? "long" : "") + '">' + hero.h1.split(/(?<=[.?])\s+/).map(function (s) { return '<span class="hl">' + s + "</span>"; }).join(" ") + "</h1><p>" + hero.sub + '</p><div class="swipe" id="swipe" role="group" aria-label="All 24 cards. Swipe to browse.">' + swipeCards + '</div><div class="sw-meta"><button type="button" class="sw-arrow" id="sw-prev" aria-label="Previous card">&#8249;</button><div class="sw-info"><p class="sw-ep" id="sw-ep"></p><span class="caps" id="sw-count"></span></div><button type="button" class="sw-arrow" id="sw-next" aria-label="Next card">&#8250;</button></div><button class="btn" id="begin" type="button">Which empire am I?</button><div class="chips" role="group" aria-label="Show cards by temperament">' + chips + '</div><p class="fine">' + D.BRAND.disclaimer + "</p></div>" +
+      '<div class="st-text" id="st-text"><div class="mascot"><img src="art/cards/mascot.jpg" alt="An owl with a spyglass, the Conquestrology mascot" onerror="this.parentNode.remove()"></div><h1 class="' + (hero.h1.length > 46 ? "long" : "") + '">' + hero.h1.split(/(?<=[.?])\s+/).map(function (s) { return '<span class="hl">' + s + "</span>"; }).join(" ") + "</h1><p>" + hero.sub + '</p><div class="swipe" id="swipe" role="group" aria-label="All 24 cards. Swipe to browse.">' + swipeCards + '</div><div class="sw-meta"><button type="button" class="sw-arrow" id="sw-prev" aria-label="Previous card">&#8249;</button><div class="sw-info"><p class="sw-ep" id="sw-ep"></p><span class="caps" id="sw-count"></span></div><button type="button" class="sw-arrow" id="sw-next" aria-label="Next card">&#8250;</button></div><button class="btn" id="begin" type="button">Which empire am I?</button><div class="chips" role="group" aria-label="Show cards by temperament">' + chips + '</div><p class="fine">' + D.BRAND.disclaimer + "</p></div>" +
       cards + '<div class="st-cap" id="st-cap" aria-hidden="true"><i>' + D.BRAND.disclaimer + "</i></div></div>";
     $("begin").addEventListener("click", function () { if (sky) sky.gather = true; setTimeout(startQuiz, animOK() && !sky.narrow ? 560 : 0); });
     skyInit();
@@ -795,7 +795,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     if (!res.now) { $("back-top").addEventListener("click", goBack); $("retake-top").hidden = true; } $("progress").style.width = "100%";
     bgMap($("view-result").querySelector(".bgmap"), e);
     try { history.replaceState(null, "", "#" + res.sun.id + "-" + res.moon.id + "-" + res.rising.id); } catch (err) {}
-    var text = "I drew " + e.name + " (" + e.moment + "). " + e.epithet + " Ambition " + e.stats[0][1] + ", Patience " + e.stats[1][1] + ", Chaos " + e.stats[2][1] + ", Drama " + e.stats[3][1] + ". What I want: " + WANTS[res.rising.m] + ". What I need: " + NEEDS[res.moon.t] + ". Empirescope: astrology, with receipts.";
+    var text = "I drew " + e.name + " (" + e.moment + "). " + e.epithet + " Ambition " + e.stats[0][1] + ", Patience " + e.stats[1][1] + ", Chaos " + e.stats[2][1] + ", Drama " + e.stats[3][1] + ". What I want: " + WANTS[res.rising.m] + ". What I need: " + NEEDS[res.moon.t] + ". Conquestrology: astrology, with receipts.";
     if ($("take")) { $("take").addEventListener("click", startQuiz); $("back-bottom").addEventListener("click", goBack); }
     if ($("copy")) $("copy").addEventListener("click", function () {
       var ok = function () { var t = $("toast"); t.classList.add("show"); setTimeout(function () { t.classList.remove("show"); }, 1600); };

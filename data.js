@@ -1,4 +1,4 @@
-/* Empirescope: content.
+/* Conquestrology: content.
    Hidden structure: four temperaments (F, E, A, W) x three modes (C, X, M) = 12 empires.
    Temperaments are shown as Conquerors / Builders / Traders / Keepers.
    Modes are shown as Founders / Holders / Shapeshifters. Nobody is told why there are twelve. */
@@ -6,7 +6,7 @@
 window.EMPIRE_DATA = (function () {
 
   var BRAND = {
-    name: "Empirescope",
+    name: "Conquestrology",
     tagline: "Astrology, with receipts.",
     /* Homepage headlines: one is picked at random each time the page opens. */
     heroes: [

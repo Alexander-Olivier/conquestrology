@@ -1,4 +1,4 @@
-/* Empirescope: the long readings. Each card has a zodiac-style profile that is true of the sign, and a separate narrative of the year it is in. */
+/* Conquestrology: the long readings. Each card has a zodiac-style profile that is true of the sign, and a separate narrative of the year it is in. */
 window.EMPIRE_READINGS = (function () { var R = {};
 R.rome = {
   strengths: ["Stamina", "Loyalty", "Organisation", "Showmanship"],
