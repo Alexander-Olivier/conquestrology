@@ -1,0 +1,9 @@
+# Raw ChatGPT captures and early design explorations stay local
+art/raw/
+art/mood/
+art/mood2/
+art/mood3/
+art/gifs/
+moodboard*.html
+
+.DS_Store
