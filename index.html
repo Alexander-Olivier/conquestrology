@@ -116,6 +116,17 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .part h2 { font-family: var(--display); font-size: 1.7rem; letter-spacing: 0.06em; }
 .part p { color: var(--fg2); font-style: italic; font-size: 1.15rem; }
 .sec { display: grid; gap: 8px; }
+.bed { border: 1px solid var(--gold); background: var(--tint); }
+.bed summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 14px 16px; cursor: pointer; list-style: none; }
+.bed summary::-webkit-details-marker { display: none; }
+.bed summary b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; margin-top: 2px; }
+.bed-go { flex: none; padding: 8px 12px; background: var(--fg); color: var(--paper); font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.bed-go::before { content: "Tap to open"; }
+.bed[open] .bed-go { background: none; color: var(--fg); box-shadow: inset 0 0 0 1px var(--gold); }
+.bed[open] .bed-go::before { content: "Close"; }
+.bed-in { display: grid; gap: 14px; padding: 6px 16px 22px; border-top: 1px solid var(--gold-soft); padding-top: 18px; }
+.bed-in blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 6vw, 2.5rem); line-height: 1.14; letter-spacing: 0.01em; color: var(--fg); text-wrap: balance; }
+.bed-in p { font-size: 1.2rem; max-width: 64ch; }
 .sec h3 { font-family: var(--display); font-size: 1.05rem; letter-spacing: 0.16em; text-transform: uppercase; }
 .sec p { font-size: 1.2rem; max-width: 64ch; }
 .sec p + p { margin-top: 6px; }
@@ -342,6 +353,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 <script src="moments.js"></script>
 <script src="readings.js"></script>
 <script src="roasts.js"></script>
+<script src="bedroom.js"></script>
 <script>
 (function () {
   var D = window.EMPIRE_DATA, Q = D.QUESTIONS, E = D.EMPIRES, MM = window.EMPIRE_MOMENTS, SIT = window.SITUATIONS || {};
@@ -742,6 +754,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
     return { sun: D.findMoment(tk[0], mk[0], stt), moon: D.findMoment(tk[1], mk[0], stt), rising: D.findMoment(tk[0], mk[1], stt), now: now };
   }
 
+  function bedSec(e) {
+    var b = (window.EMPIRE_BED || {})[e.id];
+    if (!b) return "";
+    return '<details class="bed"><summary><span><span class="caps">Adults only, 18+</span><b>In bed</b></span><span class="bed-go" aria-hidden="true"></span></summary><div class="bed-in"><span class="caps">Your kink: ' + b.kink + "</span><blockquote>&ldquo;" + b.quote + "&rdquo;</blockquote><p>" + b.text + "</p></div></details>";
+  }
   function sec(title, body, pic, flip) {
     var ps = (Array.isArray(body) ? body : [body]).map(function (p) { return "<p>" + p + "</p>"; }).join("");
     if (!pic) return '<section class="sec"><h3>' + title + "</h3>" + ps + "</section>";
@@ -781,6 +798,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
       sec("At your best", R.best, art + "best.jpg") +
       sec("At your worst", R.worst) +
       sec("In love", R.love, art + "love.jpg", true) +
+      bedSec(e) +
       sec("With friends", R.friends) +
       sec("At work", R.work, art + "work.jpg") +
       sec("With money", R.money) +

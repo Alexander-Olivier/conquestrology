@@ -22,6 +22,7 @@ Then open http://localhost:8791/index.html. To preview a specific homepage headl
 | `data.js` | Brand copy, homepage headlines, the 20 personality questions, the first 12 empires |
 | `moments.js` | The 6 situation questions and the other 12 cards |
 | `readings.js` | The long readings: the sign and the year narrative for each card |
+| `bedroom.js` | The 18+ "In bed" chapter for each card, closed until the reader opens it |
 | `roasts.js` | The one-liner aimed at the reader on each card, used as the result page headline and in the share text |
 | `situations.js` | The real powers around each card, for the situation maps |
 | `hist.js`, `world.js` | Border and land data |
