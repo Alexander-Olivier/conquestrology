@@ -293,6 +293,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .sw-arrow:disabled { opacity: 0.3; cursor: default; }
 }
 @keyframes sc-float { 50% { transform: translateY(-6px); } }
+@media (min-width: 1200px) { .bed-in { grid-template-columns: 240px minmax(0, 1fr); gap: 18px 22px; } .bed-in p { grid-column: 1 / -1; } }
 @media (prefers-reduced-motion: reduce) { .wheel { animation: none; } .fc { transition: none; } .sc.cur .sc-in { animation: none; } }
 @media (max-width: 420px) { .twelve { grid-template-columns: repeat(4, minmax(0, 1fr)); } .rel { grid-template-columns: 1fr; } }
 
@@ -319,8 +320,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .actions { justify-items: center; }
   .r-grid { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 40px; align-items: start; }
   .r-side { position: sticky; top: 76px; }
-  .bed-in { grid-template-columns: 240px minmax(0, 1fr); gap: 18px 22px; }
-  .bed-in p { grid-column: 1 / -1; }
   .paper { padding: 36px 40px; }
   .reading { gap: 32px; }
   .sheet { gap: 32px; }
