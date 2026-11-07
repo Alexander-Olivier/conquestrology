@@ -1,4 +1,4 @@
-// One-liner per card, aimed at the reader. Shown on the result page, the homepage captions and the share text.
+// One-liner per card, aimed at the reader. Shown as the result page headline and in the share text.
 window.EMPIRE_ROASTS = {
   rome: "You’ve told this story at every dinner since AD 117.",
   mongol: "You arrive, take over, and leave before anyone can ask you to help clean up.",
