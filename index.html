@@ -116,20 +116,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .part h2 { font-family: var(--display); font-size: 1.7rem; letter-spacing: 0.06em; }
 .part p { color: var(--fg2); font-style: italic; font-size: 1.15rem; }
 .sec { display: grid; gap: 8px; }
-.bed { border: 1px solid var(--gold); background: var(--tint); }
-.bed summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 14px 16px; cursor: pointer; list-style: none; }
-.bed summary::-webkit-details-marker { display: none; }
-.bed summary b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; margin-top: 2px; }
-.bed-go { flex: none; padding: 8px 12px; background: var(--fg); color: var(--paper); font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; }
-.bed-go::before { content: "Tap to open"; }
-.bed[open] .bed-go { background: none; color: var(--fg); box-shadow: inset 0 0 0 1px var(--gold); }
-.bed[open] .bed-go::before { content: "Close"; }
-.bed-in { display: grid; gap: 14px; padding: 18px 16px 22px; border-top: 1px solid var(--gold-soft); }
+.bed { display: grid; gap: 14px; }
 .bed-pic { border: 1px solid var(--gold); background: var(--paper); padding: 4px; aspect-ratio: 1; }
 .bed-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .bed-top { display: grid; gap: 12px; align-content: center; min-width: 0; }
-.bed-in blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 6vw, 2.5rem); line-height: 1.14; letter-spacing: 0.01em; color: var(--fg); text-wrap: balance; }
-.bed-in p { font-size: 1.2rem; max-width: 64ch; }
+.bed blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.55rem, 6vw, 2.5rem); line-height: 1.14; letter-spacing: 0.01em; color: var(--fg); text-wrap: balance; }
+.bed p { font-size: 1.2rem; max-width: 64ch; }
 .sec h3 { font-family: var(--display); font-size: 1.05rem; letter-spacing: 0.16em; text-transform: uppercase; }
 .sec p { font-size: 1.2rem; max-width: 64ch; }
 .sec p + p { margin-top: 6px; }
@@ -293,7 +285,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .sw-arrow:disabled { opacity: 0.3; cursor: default; }
 }
 @keyframes sc-float { 50% { transform: translateY(-6px); } }
-@media (min-width: 1200px) { .bed-in { grid-template-columns: 240px minmax(0, 1fr); gap: 18px 22px; } .bed-in p { grid-column: 1 / -1; } }
+@media (min-width: 1200px) { .bed { grid-template-columns: 240px minmax(0, 1fr); gap: 18px 22px; } .bed h3, .bed p { grid-column: 1 / -1; } }
 @media (prefers-reduced-motion: reduce) { .wheel { animation: none; } .fc { transition: none; } .sc.cur .sc-in { animation: none; } }
 @media (max-width: 420px) { .twelve { grid-template-columns: repeat(4, minmax(0, 1fr)); } .rel { grid-template-columns: 1fr; } }
 
@@ -761,7 +753,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   function bedSec(e) {
     var b = (window.EMPIRE_BED || {})[e.id];
     if (!b) return "";
-    return '<details class="bed"><summary><span><span class="caps">Adults only, 18+</span><b>In bed</b></span><span class="bed-go" aria-hidden="true"></span></summary><div class="bed-in"><div class="bed-pic"><img src="art/bed/' + e.id + '.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"></div><div class="bed-top"><span class="caps">Your kink: ' + b.kink + "</span><blockquote>&ldquo;" + b.quote + "&rdquo;</blockquote></div><p>" + b.text + "</p></div></details>";
+    return '<section class="sec bed"><h3>In bed</h3><div class="bed-pic"><img src="art/bed/' + e.id + '.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"></div><div class="bed-top"><span class="caps">Your kink: ' + b.kink + "</span><blockquote>&ldquo;" + b.quote + "&rdquo;</blockquote></div><p>" + b.text + "</p></section>";
   }
   function sec(title, body, pic, flip) {
     var ps = (Array.isArray(body) ? body : [body]).map(function (p) { return "<p>" + p + "</p>"; }).join("");

@@ -1,4 +1,4 @@
-// The 18+ "In bed" chapter for each card. It stays closed until the reader opens it, and it is left out of the copied reading.
+// The "In bed" chapter for each card, shown on the result page after "In love" and left out of the copied reading.
 window.EMPIRE_BED = {
   rome: { kink: "witnesses", quote: "You came, you saw, and you’d like it written down.",
     text: "You like it on top with the lights on, and you tell your friends the next morning, like Caesar reporting to the Senate. You run a threesome the way Trajan ran a campaign, with supply lines and a plan for the far border. You can go for hours, and you’ll mention that too. You always think you’re being generous, and you hand out compliments like Roman citizenship, once they’ve stopped arguing. Then, while they’re still catching their breath, you start looking at their best friend, the way Trajan looked at Mesopotamia." },
