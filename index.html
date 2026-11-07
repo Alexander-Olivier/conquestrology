@@ -269,12 +269,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .sc .fa { background: #e8dcc0; }
   .sc-in { display: block; padding: 8px 8px 9px; background: var(--card); border: 1px solid var(--gold); border-radius: 10px; box-shadow: 0 18px 26px -16px rgba(60,44,16,0.6); }
   .sc.cur .sc-in { animation: sc-float 4.5s ease-in-out infinite; box-shadow: 0 24px 32px -16px rgba(60,44,16,0.7); }
-  .sw-meta { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 6px; width: 100%; margin-top: -10px; }
-  .sw-info { display: grid; gap: 2px; justify-items: center; text-align: center; min-width: 0; }
-  .st-text p.sw-ep { font-size: 1.04rem; font-style: italic; line-height: 1.22; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
+  .sw-meta { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; grid-template-areas: "ep ep ep" "prev count next"; align-items: center; gap: 4px 6px; width: 100%; margin-top: -10px; }
+  .sw-info { display: contents; }
+  #sw-prev { grid-area: prev; } #sw-next { grid-area: next; }
+  #sw-count { grid-area: count; justify-self: center; }
+  .st-text p.sw-ep { grid-area: ep; font-size: 1.04rem; font-style: italic; line-height: 1.22; min-height: 2.44em; display: flex; align-items: center; justify-content: center; text-align: center; text-wrap: balance; }
   .sw-arrow { width: 44px; height: 44px; display: grid; place-items: center; background: var(--paper); border: 1px solid var(--gold); border-radius: 50%; font-size: 1.5rem; line-height: 1; color: var(--fg); cursor: pointer; padding: 0 0 3px; }
   .sw-arrow:disabled { opacity: 0.3; cursor: default; }
 }
+@media (max-width: 340px) { .st-text p.sw-ep { min-height: 3.66em; } }
 @keyframes sc-float { 50% { transform: translateY(-6px); } }
 @media (prefers-reduced-motion: reduce) { .wheel { animation: none; } .fc { transition: none; } .sc.cur .sc-in { animation: none; } }
 @media (max-width: 420px) { .twelve { grid-template-columns: repeat(4, minmax(0, 1fr)); } .rel { grid-template-columns: 1fr; } }
@@ -338,12 +341,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 <script src="data.js"></script>
 <script src="moments.js"></script>
 <script src="readings.js"></script>
+<script src="roasts.js"></script>
 <script>
 (function () {
   var D = window.EMPIRE_DATA, Q = D.QUESTIONS, E = D.EMPIRES, MM = window.EMPIRE_MOMENTS, SIT = window.SITUATIONS || {};
   E.forEach(function (e) { var a = MM.ADD[e.id]; if (a) { e.state = a.state; e.moment = a.moment; e.mapKey = a.mapKey; e.flagKey = a.flagKey; e.situation = a.situation; e.next = a.next; if (a.epithet) e.epithet = a.epithet; if (a.nowLine) e.nowLine = a.nowLine; if (a.stats) e.stats = a.stats; } else { e.state = "high"; e.mapKey = e.id; e.flagKey = e.id; } });
   MM.NEW.forEach(function (e) { E.push(e); D.byId[e.id] = e; });
-  E.forEach(function (e) { e.r = window.EMPIRE_READINGS[e.id]; });
+  E.forEach(function (e) { e.r = window.EMPIRE_READINGS[e.id]; e.roast = (window.EMPIRE_ROASTS || {})[e.id] || e.epithet; });
   var SQ = MM.SITUATION, ALLQ = Q.concat(SQ);
   D.CHAPTERS.push({ at: Q.length, title: "This Year", line: "Six questions about now, not about you. Empires have weather too." });
   D.findMoment = function (t, m, st) { var c = E.filter(function (e) { return e.t === t && e.m === m; }); var k = c.filter(function (e) { return e.state === st; }); return k[0] || c[0] || E[0]; };
@@ -558,7 +562,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     var s = swipe; s.i = i;
     s.items.forEach(function (it, n) { it.el.classList.toggle("cur", n === i); if (Math.abs(n - i) <= 3) { var pics = it.el.querySelectorAll("img[loading=lazy]"); for (var p = 0; p < pics.length; p++) pics[p].loading = "eager"; } });
     var e = s.items[i].e;
-    $("sw-ep").textContent = e.epithet; $("sw-count").textContent = (i + 1) + " of " + s.items.length;
+    $("sw-ep").textContent = e.roast; $("sw-count").textContent = (i + 1) + " of " + s.items.length;
     $("sw-prev").disabled = i === 0; $("sw-next").disabled = i === s.items.length - 1;
     document.querySelectorAll("#stage .chip").forEach(function (c) { c.setAttribute("aria-pressed", String(c.dataset.t === e.t)); });
   }
@@ -659,7 +663,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     els.forEach(function (el, i) {
       var slot = (i * 7) % els.length, e = D.byId[el.dataset.id], layer = i % 3, c = { el: el, e: e, i: slot, layer: layer, a0: slot / els.length * Math.PI * 2 + (Math.random() - 0.5) * 0.12, om: [0.022, -0.016, 0.012][layer], f1: 0.3 + Math.random() * 0.5, f2: 0.25 + Math.random() * 0.45, p1: Math.random() * 6.28, p2: Math.random() * 6.28, rz: (Math.random() - 0.5) * 7, x: 0, y: 0, hx: 0, vx: 0, vy: 0, s: 1, w: 120, h: 170, lanePos: (slot % 6) * 120 + (slot % 4) * 37 };
       sky.cards.push(c);
-      var txt = "<b>" + e.name + ", " + momentYear(e) + ".</b> <i>" + e.epithet + "</i>";
+      var txt = "<b>" + e.name + ", " + momentYear(e) + ".</b> <i>" + e.roast + "</i>";
       var on = function () { c.hot = true; skyCaption(txt); }, off = function () { if (!c.drag) { c.hot = false; skyCaption(""); } };
       el.addEventListener("pointerenter", function (ev) { if (ev.pointerType === "mouse") on(); });
       el.addEventListener("pointerleave", function (ev) { if (ev.pointerType === "mouse") off(); });
@@ -752,7 +756,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     var backLabel = backTo === "deck" ? "Back to the deck" : "Back to all cards";
     var h = '<div class="bgmap"></div><div class="r-grid"><aside class="r-side">' +
       (res.now ? "" : '<button class="backbtn" id="back-top" type="button"><span aria-hidden="true">&#8249;</span> ' + backLabel + "</button>") +
-      '<div class="r-head">' + flagWave(e) + '<div><span class="caps">' + (res.now ? "Your card" : "From the deck") + '</span><h1>' + e.name + ", " + yr + "</h1><i>" + e.epithet + "</i></div></div>" +
+      '<div class="r-head">' + flagWave(e) + '<div><span class="caps">' + (res.now ? "Your card" : "From the deck") + '</span><h1>' + e.name + ", " + yr + "</h1><i>" + e.roast + "</i></div></div>" +
       card(e, animOK() ? "flip" : "") +
       '</aside><div class="reading"><div class="paper sheet">' +
       chartSlot(e, "main") +
@@ -795,7 +799,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     if (!res.now) { $("back-top").addEventListener("click", goBack); $("retake-top").hidden = true; } $("progress").style.width = "100%";
     bgMap($("view-result").querySelector(".bgmap"), e);
     try { history.replaceState(null, "", "#" + res.sun.id + "-" + res.moon.id + "-" + res.rising.id); } catch (err) {}
-    var text = "I drew " + e.name + " (" + e.moment + "). " + e.epithet + " Ambition " + e.stats[0][1] + ", Patience " + e.stats[1][1] + ", Chaos " + e.stats[2][1] + ", Drama " + e.stats[3][1] + ". What I want: " + WANTS[res.rising.m] + ". What I need: " + NEEDS[res.moon.t] + ". Conquestrology: astrology, with receipts.";
+    var text = "I drew " + e.name + " (" + e.moment + "). " + e.roast + " Ambition " + e.stats[0][1] + ", Patience " + e.stats[1][1] + ", Chaos " + e.stats[2][1] + ", Drama " + e.stats[3][1] + ". What I want: " + WANTS[res.rising.m] + ". What I need: " + NEEDS[res.moon.t] + ". Conquestrology: astrology, with receipts.";
     if ($("take")) { $("take").addEventListener("click", startQuiz); $("back-bottom").addEventListener("click", goBack); }
     if ($("copy")) $("copy").addEventListener("click", function () {
       var ok = function () { var t = $("toast"); t.classList.add("show"); setTimeout(function () { t.classList.remove("show"); }, 1600); };

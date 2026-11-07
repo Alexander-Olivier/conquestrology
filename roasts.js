@@ -1,0 +1,27 @@
+// One-liner per card, aimed at the reader. Shown on the result page, the homepage captions and the share text.
+window.EMPIRE_ROASTS = {
+  rome: "You’ve told this story at every dinner since AD 117.",
+  mongol: "You arrive, take over, and leave before anyone can ask you to help clean up.",
+  macedon: "Your friends are exhausted and you’ve just booked another trip.",
+  german: "You think everyone’s against you. You did a lot of work to get there.",
+  russia: "You’re the biggest person in the room and you just lost an argument to the intern.",
+  france: "You took on one more project. Your friends have started a coalition.",
+  british: "You came for one weekend. That was four years ago, and you’ve reorganised the kitchen.",
+  egypt: "You’ve ordered the same dish for years and you call it knowing yourself.",
+  inca: "You labelled every shelf in the house and you still didn’t see this coming.",
+  japan: "You rebuilt your whole personality in a year, and you still want your parents to notice.",
+  qing: "You’ve never needed anyone’s advice, and it shows.",
+  austriahungary: "You both know it’s over. You’ve just renewed the lease.",
+  abbasid: "Everyone loves your parties. Nobody has asked you to make a decision in years.",
+  venice: "You’ve never lost an argument, because you’ve never taken a side.",
+  carthage: "You did the impossible. Your boss replied with a thumbs-up.",
+  usa: "You won once, and you’ve been giving unsolicited advice ever since.",
+  spain: "You’ve never earned more. Ask your bank how that’s going.",
+  portugal: "You call it exploring. Your mother calls it running away.",
+  byzantine: "You call them boundaries. Everyone else calls them walls.",
+  ottoman: "You’re not the boss. You just decide who gets fired.",
+  mughal: "You’ve studied every religion and you still can’t pick a restaurant.",
+  austria: "You’ve lost every fight in this family, and you still do the seating plan.",
+  hre: "Your job title has three words in it, and none of them are true.",
+  ottoman1900: "You’ve been “fine” for forty years. Your relatives have started measuring the furniture."
+};
