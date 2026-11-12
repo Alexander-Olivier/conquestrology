@@ -229,7 +229,7 @@ window.EMPIRE_MOMENTS = (function () {
       next: "History's next move: the retreat from Moscow, Leipzig, abdication, Elba, a hundred days, Waterloo. And then the code, the metric system and the map remain.",
       nowLine: "You are taking over everything at work, and it is working, and you are exhausted, and they have started meeting without you.",
       allies: [["macedon", "The other young man who ran out of world."], ["russia", "A treaty on a raft on a river. It lasted five years."]],
-      rivals: [["british", "The island you could not reach."], ["austria", "Beaten four times, married once, never gone."]]
+      rivals: [["british", "The island you could not reach."], ["austria", "Your in-laws. They hosted the peace and did not invite you."]]
     },
     {
       id: "japan", t: "E", m: "M", state: "high",
@@ -404,21 +404,21 @@ window.EMPIRE_MOMENTS = (function () {
       cities: [["Vienna", 16.4, 48.2], ["Prague", 14.4, 50.1], ["Milan", 9.2, 45.5], ["Venice", 12.3, 45.4], ["Budapest", 19.0, 47.5]],
       stats: [["Ambition", 60, "To keep things exactly as they were in 1789."], ["Patience", 90, "The Congress danced for nine months."], ["Chaos", 25, "A secret police for every salon."], ["Drama", 75, "Beethoven played at the opening."]],
       situation: [
-        "1815. Austria has been beaten by Napoleon four times, lost Vienna twice, and married a daughter to him to buy time. Napoleon is now on Saint Helena, and the Congress that redrew Europe met in Vienna, at Austria's table, with Austria's chancellor holding the pen.",
-        "Metternich's system gives Austria Lombardy, Venice and the chairmanship of a German Confederation, and a Europe of five great powers who promise to meet, talk and stop revolutions together. It is a peace built on conversations and dinner parties, and it holds, mostly, for forty years."
+        "1815. Napoleon is on his way to Saint Helena, and Europe is being redrawn in Vienna, at Austria's table. An Austrian field marshal commanded the allied armies that beat him at Leipzig, and Austria's chancellor, Metternich, chairs the Congress and holds the pen.",
+        "Metternich's system gives Austria Lombardy, Venice and the presidency of a German Confederation, and gives Europe a concert of five great powers who meet, talk, balance one another and stop revolutions together, with Vienna setting the agenda. It is a peace built on conversations and dinner parties, and it holds, mostly, for forty years."
       ],
       core: [
-        "You are the host. You lost the fights and won the peace by making sure every powerful person in Europe spent nine months at your dinner table. You protect what exists, you remember who said what, and you are elegant about it.",
-        "You are the Keeper who founds things: a system, an order, a way of talking that stops wars. People underestimate you because you never win on the battlefield, and that is the point."
+        "You are the power broker. You think in maps and decades, you keep the balance, and you won the peace with a seating plan. For the next thirty years every great power in Europe checks with Vienna first, and you are elegant about it.",
+        "You are the Keeper who founds things: a system, an order, a way of talking that stops wars. Your neutrality is never passive. You stay out just long enough for everyone to need you, and then you choose."
       ],
-      best: "The diplomat who turns a defeat into a seat at the head of the table. You build the structure others live in, you keep the family's inheritance intact, and you do it with music.",
+      best: "The strategist who turns a war into a system. You build the structure others live in, you keep five great powers in balance instead of at war, and you do it with music.",
       worst: "You defend the status quo against the future itself. You mistake stability for health, you run a secret police against ideas, and 1848 is coming whether you read the pamphlets or not.",
       love: "Protective, strategic and warm in private. You marry for the family and love for yourself, and you are capable of both. You want a partner who respects the house and the rules of the house.",
-      work: "The one who runs the committee that runs everything, and never raises their voice. The process document is yours. So is the seating plan.",
+      work: "The one who runs the committee that runs everything, and never raises their voice. The agenda is yours. So is the seating plan.",
       next: "History's next move: 1848, revolutions in every capital including yours; 1866, Prussia in seven weeks; 1867, the Compromise. You become Austria-Hungary.",
       nowLine: "You have just hosted the peace and everyone owes you dinner. Enjoy the quiet; it is about thirty years long.",
       allies: [["russia", "The Holy Alliance. Holy, briefly."], ["byzantine", "Fellow keepers of a very old idea of order."]],
-      rivals: [["france", "Beat you four times. You outlasted him by a century."], ["german", "The nephew who will take the family business."]]
+      rivals: [["france", "Took Europe with the sword. You took it back with a treaty."], ["german", "The nephew who will take the family business."]]
     },
     {
       id: "hre", t: "W", m: "M", state: "strain",
