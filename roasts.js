@@ -21,7 +21,7 @@ window.EMPIRE_ROASTS = {
   byzantine: "You call them boundaries. Everyone else calls them walls.",
   ottoman: "You’re not the boss. You just decide who gets fired.",
   mughal: "You’ve studied every religion and you still can’t pick a restaurant.",
-  austria: "You’ve lost every fight in this family, and you still do the seating plan.",
+  austria: "Why win a battle when you can write the treaty?",
   hre: "Your job title has three words in it, and none of them are true.",
   ottoman1900: "You’ve been “fine” for forty years. Your relatives have started measuring the furniture."
 };
