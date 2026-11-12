@@ -921,7 +921,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
         sec("Who is on the map", "The players", [R.around, "<small>These are the real players of the year, which is a different question from who suits you.</small>"], art + "situation.jpg", true) +
         sec("In your life", "Your year, translated", R.life) +
         (nowQ ? '<section class="sec now">' + st("Right now", "The dispatch") + "<blockquote>" + nowQ + "</blockquote></section>" : "") +
-        sec("What happens next", "The prophecy", R.next) +
+        sec("What history teaches", "A word to the wise", R.next) +
         '<div class="r-end">' +
         (res.now ? '<div class="actions"><button class="btn" id="copy" type="button">Copy my reading</button><button class="btn ghost" id="retake" type="button">Draw again</button></div>' : '<div class="actions"><button class="btn" id="take" type="button">Which empire am I?</button><button class="btn ghost" id="back-bottom" type="button">' + backLabel + '</button></div>') +
         '<p class="credits"><b>Flag:</b> ' + D.FLAG_CREDITS[e.flagKey].note + " " + D.FLAG_CREDITS[e.flagKey].file + ", by " + D.FLAG_CREDITS[e.flagKey].by + ", " + D.FLAG_CREDITS[e.flagKey].license + ", via Wikimedia Commons. <b>Borders:</b> drawn for " + yearOf(e) + " from the historical-basemaps dataset (GPL v3), the nearest year it offers. <b>Coastlines:</b> Natural Earth. <b>Art:</b> generated with ChatGPT. " + D.BRAND.disclaimer + "</p></div>") +

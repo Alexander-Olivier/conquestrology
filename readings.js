@@ -28,8 +28,8 @@ R.rome = {
     "The honest question is one you have never enjoyed: which of these did you take because you wanted it, and which because it was there? One of your provinces costs more than it pays, and everyone near you already knows which."
   ],
   next: [
-    "Hadrian gave up the province, toured the whole frontier, much of it on foot, and built a wall. The poets were disappointed. Rome stopped growing and started administering, and that dull decision bought it three more centuries.",
-    "So this is the year you can hand something back on purpose, with ceremony, while it still looks like a choice. Later you will hand it back anyway, and it will look like something else."
+    "Your strength is staying power, and it has built something enormous. The lesson of what came next is that the bravest move at the top is often to stop growing and start looking after what you have. Rome lasted for centuries after it chose consolidation over conquest. Knowing where your edges are is not a retreat. It is how big things survive.",
+    "Watch out for pride that will not let you give anything back, for spreading yourself across more fronts than you can visit, and for measuring your life only by how far it reaches."
   ]
 };
 
@@ -61,8 +61,8 @@ R.mongol = {
     "What you have not done is write down who gets what. The co-founders, the siblings, the old friends: everyone has a different memory of the deal, and all of those memories are polite for as long as you are in the room."
   ],
   next: [
-    "The khanates drifted apart within a generation. Japan's typhoon sank the fleet. The roads stayed open for another century, and the plague eventually travelled along them. The conquests never quite failed. The family did.",
-    "History offers you an easy way to do better than Kublai. Stop riding for one afternoon, sit the cousins down, and put it on paper while everyone still likes you."
+    "You can do in a few years what takes other people a lifetime, and that is a real gift. The lesson from what followed is that the hard part is rarely the winning. It is keeping the people who won it with you together. Great conquests often split within a generation, not because they failed, but because nobody agreed on what came after.",
+    "Watch out for leaving the important conversations until everyone is tired, for assuming that family loyalty will hold on its own, and for riding on to the next thing before the last one has a plan."
   ]
 };
 
@@ -94,8 +94,8 @@ R.macedon = {
     "Everything you have built exists because you are personally in the room. There is no document and no deputy, and the arrangements only make sense when you explain them. You feel immortal this year, which is exactly the feeling to be suspicious of."
   ],
   next: [
-    "In June he got a fever, and he was dead in days. Asked who should inherit, he is said to have answered: to the strongest. His generals carved up the world within a decade and spent forty years killing each other over it. The Greek-speaking East he invented outlived every one of them.",
-    "You may well get a better ending than that. Write down what you want kept. Name the person. Then go and see Arabia, if you still want to."
+    "Your curiosity has taken you further than anyone thought possible, and what you started will outlast you. The lesson is that brilliant people tend to plan the next adventure and forget the handover. The ideas Alexander spread lasted for centuries, and the arrangements he never made were fought over for forty years.",
+    "Watch out for running everyone around you into exhaustion, for treating your health as if it were infinite, and for leaving it unclear who should carry on what you built. Write it down while you are well."
   ]
 };
 
@@ -127,8 +127,8 @@ R.british = {
     "Several people who have depended on you for a long time are starting to say, very quietly, that they would like to make their own decisions. You are tempted to treat this as ingratitude. It may turn out to be the most useful information you receive all decade."
   ],
   next: [
-    "Britain spent twenty-seven years pretending otherwise, then India went in 1947, and after that the keys were handed back one country at a time, with bands and bad weather. It was a long way down, and it was done with more grace than most, which is about the best that can be said for it.",
-    "You get to choose which promises to keep. You cannot afford all of them, and the people you made them to already suspect it. Choose early, tell them yourself, and let some of them go before they have to take it."
+    "You built something vast with patience and paperwork, and much of it, the language, the institutions, the habits, will stay in the world long after you stop running it. The lesson is that nobody keeps every promise and every possession forever. Those who let go early, and on their own terms, are remembered far more kindly than those who hold on until it is taken.",
+    "Watch out for commitments you can no longer afford, for confusing tradition with strength, and for the letter from the bank that everybody at the parade is pretending not to have read."
   ]
 };
 
@@ -160,8 +160,8 @@ R.egypt = {
     "The only warning is a quiet one. When the flood comes on time for long enough, you stop looking down the river. Somewhere in your world there is a new kind of ship, and somebody in your circle has mentioned it twice. You nodded and went back to the tomb."
   ],
   next: [
-    "A thousand more years followed, more or less. Egypt was invaded by Libyans, Nubians, Assyrians, Persians and Greeks, and most of them ended up dressing as pharaohs. The last one to try was a Macedonian woman named Cleopatra. Then Rome turned up and, unlike everyone before it, did not become Egyptian.",
-    "So keep the granary and the calendar, because they are the whole reason you are still here. Just walk down to the river this year and look at the ships."
+    "Your consistency is a superpower. Your routines and your sense of how things should be done have kept you steady for longer than most people manage anything. The lesson is that stable things last a very long time, and that they end when they stop noticing how the world outside the walls is changing.",
+    "Watch out for assuming the river will always rise on time, for dismissing new arrivals as passing visitors, and for comfort that slowly turns into not looking. Keep the calendar, and go and look at the ships."
   ]
 };
 
@@ -193,8 +193,8 @@ R.inca = {
     "This is the year your system is at its most exposed, and you are not looking at it. A system this tidy has one door, and everything depends on whoever is standing in it. Right now that is you, and someone new, polite and small has asked to see you alone."
   ],
   next: [
-    "Atahualpa went to the meeting with his guards unarmed, to show he had nothing to fear. It was an ambush. He filled a room with gold as a ransom and was executed anyway, and within a few years the strangers were running the place. The Spanish were still eating out of his storehouses a decade later, and people still walk his roads today.",
-    "The lesson has nothing to do with fighting harder. Do not walk into the square alone just because you have always kept your word. Other people may not have read your rules."
+    "You keep the whole thing running, and the people around you are lucky to rely on you. The lesson from what came next is a hard one, but a general one: well-run, honourable systems are often caught out not because they are weak, but because they expect everyone else to play by the same rules. Trust is a virtue. It is not a security plan.",
+    "Watch out for walking into important meetings alone, for strangers whose intentions you have not checked, and for the tiredness after a long family fight, when you are least ready for a new threat."
   ]
 };
 R.abbasid = {
@@ -225,8 +225,8 @@ R.abbasid = {
     "You may be the founder who is now a figurehead, the parent whose grown children arrange things among themselves, or the partner whose household runs perfectly on someone else's schedule. It is pleasant and it is very comfortable. Check who holds the keys, and check it before dinner."
   ],
   next: [
-    "In 945 a family of warlords walked into Baghdad and kept the caliph as an ornament. It went on like that for three more centuries, exquisite and irrelevant, with scholarship flowering and no one obeying anyone. In 1258 the Mongols arrived, and the story says the Tigris ran black with the ink of the libraries.",
-    "You have time, more than they knew. Have the conversation you have been seating around for ten years. Ask to see the accounts. People will be surprised, briefly, and then they will remember who built the room."
+    "You have built the best room in the world, full of the right people, and the culture you are creating will be studied for a thousand years. The lesson is that influence and authority are not the same thing. Hosts who stop checking the accounts and stop making decisions can keep the prestige for a long time while the real power quietly walks out of the door.",
+    "Watch out for people who sit down before you have finished speaking, for handing the hard jobs to others who then keep them, and for letting brilliance stand in for control."
   ]
 };
 
@@ -258,8 +258,8 @@ R.venice = {
     "A much bigger player is on the rise and it is about to swallow something near you, a client or a competitor or an old ally. You will feel a pang. You will also, if you are honest, have started drafting the email."
   ],
   next: [
-    "Constantinople fell in 1453, and within a year Venice had signed a trade agreement with the man who took it. It worked for a while. Then in 1498 a Portuguese captain sailed round Africa to India, and the spice no longer needed you. Three centuries followed of slowly losing islands while throwing better and better parties. Napoleon ended it in 1797 without a fight.",
-    "So sign the deal, because you were always going to. Then ask the question Venice left too late: what do you do when the whole trade moves to another ocean? This is a good year to start another line of business while nobody thinks you need one."
+    "You saw value where everyone else saw a swamp, and you have been right for a very long time. The lesson is that every success built on one route, one market or one skill depends on that route staying where it is. When the world finds a way around you, being clever about the old business is not enough.",
+    "Watch out for depending on a single source of income, for news from far away that seems not to concern you, and for the temptation to throw better parties instead of starting a new line of business."
   ]
 };
 
@@ -291,8 +291,8 @@ R.carthage = {
     "Back at base, nothing is being done. Nobody is sending what you need, the people in charge were never quite in favour of this, and your own support is running out while your reputation grows. You keep winning, and each win makes it easier for everyone at home to assume you do not need anything."
   ],
   next: [
-    "Hannibal stayed in Italy for fifteen years, undefeated, with the senate at home sending almost nothing. Rome stopped trying to beat him and went to Africa instead. He was recalled, and he lost at Zama in 202 BC. Fifty years later Rome came back, besieged the city for three years, and burned it for days.",
-    "Your version can go differently. Stop for one week and call home. Fund the thing you started, or find out exactly who is not funding it. The victories are real, and they will not win this on their own."
+    "You can get almost anywhere on talent and nerve, and you have already done what everyone said could not be done. The lesson is that brilliant campaigns are lost at home more often than in the field. The person far away doing the impossible needs someone back at base who funds it, believes in it and keeps the door open.",
+    "Watch out for losing touch with the people who support you, for victories that never turn into a settlement, and for rivals who stop fighting you and go after what you left unguarded."
   ]
 };
 
@@ -324,8 +324,8 @@ R.byzantine = {
     "Meanwhile the household is fighting, and the arguments are vicious because the stakes are small. Worse, you have become dependent on people who have their own plans for you, and you are calling them friends because the alternative is hard to look at."
   ],
   next: [
-    "In 1204 the crusade, deep in debt to Venice, turned up at your walls instead of Egypt. For the first time in nine centuries the city fell, and the army of fellow Christians looted it for three days. The bronze horses are still in Venice. Byzantium came back in 1261, smaller and poorer, and held on until a sultan arrived with a very large gun in 1453.",
-    "The walls have never been your problem. Look hard at who you owe, then stop fighting indoors. It is time to find out what you could keep if you let the rest go, while the choice is still yours."
+    "You have kept the lights on through more trouble than most people will ever see, and that resilience is real. The lesson is that walls protect you from enemies, but not from debts, divided families or allies with their own agenda. The worst blows tend to come from inside the house, or from the people you owe.",
+    "Watch out for fighting indoors while others negotiate outside, for creditors who start making your decisions, and for friends whose help comes with terms you did not choose."
   ]
 };
 
@@ -357,8 +357,8 @@ R.ottoman = {
     "Some part of the household has got loud, and you have been able to manage it so far. What deserves your attention is the certainty. You have one big, old goal in the back of your mind, your own version of Vienna, and it has begun to feel as though it were owed to you."
   ],
   next: [
-    "A family of ruthless grand viziers restored order a few years later, and Crete finally fell in 1669. Then, in 1683, the army went for Vienna again. It camped at the gates for two months and was broken in a single afternoon by a relief force coming down the hill. The empire lost Hungary within twenty years and spent two centuries holding on, which it did better than anyone has ever done anything.",
-    "So you have thirty good years, and you should enjoy them. Leave the old target alone unless you can say, out loud, to someone who disagrees with you, why it is still worth what it will cost."
+    "Your patience is extraordinary, and the order you are about to restore will give you a long, good stretch. The lesson is that long games are won by knowing when to stop. Great powers often lose the most not to an enemy, but to one last campaign for an old target, undertaken because it used to matter.",
+    "Watch out for sieges that have become a habit, for unfinished business that is really about pride, and for confusing what you can still do with what is still worth doing."
   ]
 };
 
@@ -390,8 +390,8 @@ R.mughal = {
     "Nobody is really watching the back door, because you do not think in back doors. Your heir, or your deputy, or your oldest child, is growing impatient. And someone small and very polite has just asked for permission to do a little business on the edge of what you have built. It seems harmless, and you are inclined to say yes."
   ],
   next: [
-    "On the last day of that year, in London, Queen Elizabeth signed a charter for a small trading company. The Mughals gave it a port, then some privileges, and a century and a half later it took Bengal. In between came the Taj Mahal, built by a grieving emperor, and Aurangzeb's wars. The last Mughal wrote poetry in exile in Rangoon in 1862. It was good poetry.",
-    "You can keep everything you love about this year. Just read what you sign, and give someone unsentimental the job of watching the edges."
+    "You collect cultures, ideas and beautiful things, and you are making some of the loveliest work the world will ever see. The lesson is that generous, open courts can be undone by small concessions that nobody reads closely. The most dangerous partner is often the one who arrives asking for very little.",
+    "Watch out for signing things you have not read, for modest visitors with long plans, and for spending on beauty while nobody is watching the edges."
   ]
 };
 R.german = {
@@ -422,8 +422,8 @@ R.german = {
     "You are starting to feel that it would be better to have this out now, while you are strong, before they get any stronger. You have already prepared the document, and a part of you is looking forward to sending it. That is the part to keep an eye on."
   ],
   next: [
-    "In August 1914 the plan started on time and ended in mud on the Marne within six weeks. Four more years followed, along with the deaths of millions. The empire came to an end in 1918, and the peace was signed in the same Hall of Mirrors where it had been proclaimed. The century was shaped by what happened next.",
-    "No one forced that outcome. A cooler head in Berlin that July could have changed the century. So take the plan off the table for a week, and call one of the people you suspect. Most of the talent you have can be used for something other than winning this."
+    "You arrived late and became excellent quickly, and your talent is not in question. The lesson of what came next is that capable people are most dangerous to themselves when the plan starts running on its own timetable. Most disasters at the top are not inevitable. They happen because nobody slowed down long enough to pick up the phone.",
+    "Watch out for promises to friends that commit you to their fights, for plans that cannot be stopped once they start, and for the feeling that you have to prove yourself to the people who were already seated."
   ]
 };
 
@@ -455,8 +455,8 @@ R.russia = {
     "At home things are no better, because the people closest to you have been asking for years for one or two reasonable changes. You have been promising to look into it. You can feel the urge to double down, go quiet, and wait for winter. It has worked before. It is a poor answer to people who are at the palace gates with a list."
   ],
   next: [
-    "The tsar signed a peace, then promised a parliament that he had no intention of listening to. He dissolved it when it spoke. There were twelve years of grievance and half-reform, and then another war, and in 1917 the whole thing came down in a matter of days. The country survived the empire. It usually does.",
-    "You can get a better result than Nicholas did, and very cheaply. Rest first, as you are in no shape to react. Then give the people at the gate one of the things on their list, for real, while they are still asking."
+    "You are vast, patient and tougher than anyone expects, and you will come through this. The lesson is that the moment after a defeat is the best and cheapest time to change. Rulers who offer reform with one hand and take it back with the other usually end up with neither the old order nor the new one.",
+    "Watch out for half-promises you do not mean to keep, for treating the people at the gate as the problem, and for waiting for time to settle things when time has stopped being on your side."
   ]
 };
 
@@ -488,8 +488,8 @@ R.france = {
     "You are also running on fumes. You have a chronic problem that you have stopped looking at, your own version of Spain. People agree with you to your face in meetings. Then they go and meet without you, and you have heard about it. Right now you are planning something bigger to fix all this, and you have told everybody that it will be quick."
   ],
   next: [
-    "He reached Moscow in September. The city was empty, and then it was on fire. The tsar did not answer his letters. The retreat began in October and the snow came soon after. Of the army that crossed the Niemen, only a small fraction came back. Then came Leipzig, abdication, Elba, a hundred more days, and Waterloo. The code, the metric system and the modern state outlived it all.",
-    "You still have the river in front of you. Nothing has crossed yet. Think about what would happen if you simply did not go, or fixed Spain first, and let them call you cautious for one year."
+    "You are the most talented person in the room, and much of what you are building, the systems, the rules, the way things are run, will outlast every campaign. The lesson is that brilliance tends to fail at one particular moment: when it takes on one more front than it can handle, on a timetable it announced too confidently.",
+    "Watch out for open problems you are leaving behind you, for rivals who simply refuse to fight on your terms, and for promising everyone it will only take three weeks."
   ]
 };
 
@@ -521,8 +521,8 @@ R.japan = {
     "The win is smaller than it should be, too. The settlement, the raise or the recognition is less than you have earned, and the crowd in your own head is rioting about it. This is the moment that decides what the whole reinvention was for. You are drawing a conclusion right now about how the world works, and you need to look carefully at what it is."
   ],
   next: [
-    "At Portsmouth, Japan received far less than it had hoped, and riots broke out in Tokyo. The lesson taken was the dangerous one: the world respects force. Korea was annexed in 1910. The lesson of 1905 became the policy of 1931 and then of 1941, and it ended in ruin in 1945. Then Japan rebuilt itself again, entirely, and did it better.",
-    "You have the same talent, without having to go through any of the middle part. Enjoy the win. Then decide, this year, that you are not obliged to frighten anyone."
+    "You remade yourself from the ground up, and you have earned this win. The lesson is about which lesson you take from success. Winners who decide that the world only respects force tend to keep testing that theory until it breaks them. Your real gift is the ability to rebuild, and it works best in peacetime.",
+    "Watch out for disappointment turning into grievance, for a reputation for toughness that you start to feel obliged to maintain, and for people around you who only ever want the next victory."
   ]
 };
 
@@ -554,8 +554,8 @@ R.qing = {
     "Recently somebody younger, or from another field, turned up with a new thing and a slightly rude manner. They asked you to change just one thing. You were gracious and you sent them away with a present, and it has been a relief to get back to the proper order. You have not actually looked at what they brought. It is still in the cupboard."
   ],
   next: [
-    "Macartney went home with nothing and reported that the empire was an old warship, impressive only for its bulk. In 1839 the British came back with gunboats and opium, and there followed a century of unequal treaties and rebellions, which the Chinese still call the century of humiliation. When foreign soldiers looted the Summer Palace in 1860, they found Macartney's gifts, unused. The dynasty fell in 1912. The country did not, as you may have noticed.",
-    "You have about a generation of grace, and it costs very little to use it. Take the clock out of the cupboard, and find out how it works. Ask the rude young person to lunch."
+    "Your house is the finest in the world, and its refinement is real. The lesson is that a great civilisation's biggest risk is rarely a rival. It is a closed door. Those who treat new tools and strange visitors as curiosities rather than information tend to meet them again later, on worse terms.",
+    "Watch out for gifts you leave in the cupboard, for etiquette that blocks a useful conversation, and for being so sure of your own system that you stop asking how other people do things."
   ]
 };
 
@@ -587,8 +587,8 @@ R.austriahungary = {
     "Lately a third party, stronger than either of you, has started making your decisions. You did not agree to that exactly. It just seemed easier, on the day. Everyone tells you how well you handle everything, and you are tired of hearing it."
   ],
   next: [
-    "They went on like that for forty-three more years, waltzing around the question, with some of the best art, science and coffee in history as a by-product. Germany became the formal senior partner in 1879. In 1908 they annexed Bosnia, and in 1914 a student shot the heir to the throne in its capital. The relationship ended when everything else did.",
-    "You do not need to wait for Sarajevo. Say the thing out loud, this year, at some time other than the scheduled renegotiation. Staying can be fine, if you actually choose it. So can leaving. What has been killing you is the arrangement where nobody ever has to decide."
+    "You hold together something that should not hold, and you do it with grace, art and very good coffee. The lesson is that a compromise can buy decades, which is a real achievement, but a compromise that is never revisited slowly becomes the problem. Arrangements where nobody ever has to decide end up being decided by someone else.",
+    "Watch out for a stronger partner who quietly sets your course, for postponing the big question to the next renegotiation, and for small crises far away that touch your weakest seam."
   ]
 };
 R.usa = {
@@ -619,8 +619,8 @@ R.usa = {
     "It is a lovely feeling, and the danger in it is almost invisible. You have had an enemy for so long that it has been organising your whole life. Without one, you may have no idea what you are for, and you are likely to start saying yes to everything. You are also starting to assume that things have turned out this way because you were right."
   ],
   next: [
-    "The following decade was the best party anyone could remember. The market rose, the internet arrived, and the book sold very well. Then came 2001, then two long wars, then 2008, and the discovery that history had not read the book. The old rival recovered its temper. The other one became the factory of the world and then, quite politely, a superpower.",
-    "You are still at the top, and you get to decide what it means. Call the old allies. Look seriously at the people who did not get an invitation, and find out what they have been saying. Having no rival is the best time to work out what you actually want."
+    "You won without the war everyone feared, and you built a house the whole world wanted to visit. The lesson is that the moment of greatest success is when you are most likely to stop listening. Those at the top who assume history is over tend to be surprised by everyone who never got an invitation.",
+    "Watch out for taking old allies for granted, for believing your own book, and for rivals you have written off as finished or too polite to matter."
   ]
 };
 
@@ -652,8 +652,8 @@ R.spain = {
     "Two of the things you have been holding on to have just walked out of the door, or are about to. It may be a business partner, a child who has stopped pretending, or a client who has found someone cheaper. Your first instinct is to fight to get them back, at any cost, and you have the outfit for it. You just do not have the money."
   ],
   next: [
-    "Portugal was gone for good, recognised in 1668. Catalonia took twelve years to bring back. Olivares was dismissed. At Rocroi in 1643 the famous Spanish infantry was broken, and five years later Spain recognised the Dutch. The great house went on for two centuries with its roof leaking, and it still produced some of the finest painting ever made.",
-    "You have one thing that Philip IV never tried. Stop keeping up the appearance, for one month, and see who stays. Then sit down, open the post, and choose the two things you are actually going to keep."
+    "You have style, reach and a sense of occasion nobody else matches, and the art you are making will be admired forever. The lesson is that grand houses rarely fall from a single blow. They leak, slowly, because keeping up appearances costs more than anyone will admit, and the hard choices get made too late.",
+    "Watch out for letters you leave unopened, for holding on to everything so that you never have to lose anything, and for spending to look strong instead of choosing the two things that actually matter."
   ]
 };
 
@@ -685,8 +685,8 @@ R.portugal = {
     "You should enjoy this completely, because it is the good part. You also have a small worry that you have not been home in a while, and that the places you have opened are held by very few people. You can see that a bigger fleet might come along. Just not this year."
   ],
   next: [
-    "Bartolomeu Dias, who had first rounded the Cape, died in a storm off that same Cape on the very voyage that found Brazil. Goa was taken in 1510 and Malacca in 1511. For a hundred years you were the gateway to Asia. Then the Dutch and the English arrived, with bigger fleets, and took your forts one at a time. The last port, Macau, was handed back in 1999, and the language is now spoken by a quarter of a billion people.",
-    "You are packing already, and you are right to. Go and see that coast. Just pick one of the places you have already found and decide, this year, to stay long enough to finish it."
+    "You are small and bold, and you will turn out to have been everywhere. Your language and your stories will travel further than any of your ships. The lesson is that pioneers find the routes, and others, with bigger fleets, often come along to occupy them. Being first is not the same as being able to hold on.",
+    "Watch out for opening more places than you can finish, for larger competitors following your maps, and for treating every new horizon as more urgent than the one you have already found."
   ]
 };
 
@@ -718,8 +718,8 @@ R.austria = {
     "Enjoy it. You have earned this, and you are very good at hosting. The one thing to watch is that you have started to take the current arrangement as the natural order of the world. Somewhere near you, a young person is reading something, and you have had an urge to have a word with them."
   ],
   next: [
-    "The next few years are yours. People will bring you their disputes, their deals and their seating plans, and the arrangement you have built will carry everyone further than they expect. Vienna's peace held for thirty years. Yours can too, and it is a real achievement, so let yourself enjoy it.",
-    "The danger is not a rival. It is the day someone close to you wants something your arrangement has no seat for: a new job, a new partner, a new idea. When that day comes, make room before you are asked. Vienna waited, and in 1848 the crowds came to the door. You can open it yourself."
+    "What you built is real, and it can carry you a long way. The lesson from the years after 1815 is a general one: systems that keep the peace grow comfortable, and comfort is how the world quietly moves on without you. The ones that last let change in a little at a time, on their own terms, while they still hold the pen.",
+    "Watch out for treating every new idea as a threat to the balance, for spending your energy on keeping the peace at home while the people around you learn new things, and for the day your arrangement has no seat for someone who matters to you. Modernise before you have to."
   ]
 };
 
@@ -751,8 +751,8 @@ R.hre = {
     "Recently a strong figure you relied on has gone, and the vacuum is interesting. Everyone is expecting a successor, and it may be you. You could step up and become one definite thing, at some cost. Or you could carry on as you are, charmingly, and let others divide up the real work. You have done it before, and it has been working for centuries."
   ],
   next: [
-    "The Great Interregnum lasted until 1273, when the electors picked a minor count called Rudolf of Habsburg, on the grounds that he seemed harmless. His family went on to collect the title and keep it for most of five hundred years. Voltaire joked that the empire was neither holy, nor Roman, nor an empire. In 1806 Napoleon told them to stop, and so, after a thousand years, they did.",
-    "That is a remarkable run for something nobody could define, and you may not need to change a thing. Still, try being one thing for a year. Pick the one you would most miss, and then tell people."
+    "You have a grand, old role that people respect, and a thing nobody can define can last a remarkably long time. Yours may last for centuries. The lesson is that being many things to many people works until someone needs you to be one thing, and then nobody is quite sure what you will do.",
+    "Watch out for titles with no power behind them, for letting other people vote on your future, and for keeping everyone happy by never choosing."
   ]
 };
 
@@ -784,8 +784,8 @@ R.ottoman1900 = {
     "You have become very good at managing this, and you have got through a lot of years by playing them all against each other. You check everything. You see very few people. The danger has moved. It now comes from the bright young people inside the house, who have stopped believing that you have a plan."
   ],
   next: [
-    "In 1908 the young officers marched, the sultan restored the constitution, and a year later they removed him. The Balkan wars took most of what was left in Europe. Then came the alliance with Germany and the world war, during which the empire's government carried out the Armenian genocide. The last sultan left on a British warship in 1922. A republic was declared the following year, by one of those young officers.",
-    "You are not dead, whatever they say, and that decision is not theirs to make. But decide what the next chapter is before they decide it for you. Open a window, talk to the young officers, and hand over something real while it can still be a gift."
+    "You have outlived the people who predicted your end, and that toughness deserves respect. The lesson is that institutions everyone has written off rarely die of their enemies alone. They end when they cling to control and leave reform to the people who are already tired of waiting.",
+    "Watch out for informers in place of friends, for promises of reform that you take back, and for impatient young people who would have been your allies if you had let them in."
   ]
 };
 return R; })();
