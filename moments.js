@@ -412,7 +412,7 @@ window.EMPIRE_MOMENTS = (function () {
         "You are the Keeper who founds things: a system, an order, a way of talking that stops wars. Your neutrality is never passive. You stay out just long enough for everyone to need you, and then you choose."
       ],
       best: "The strategist who turns a war into a system. You build the structure others live in, you keep five great powers in balance instead of at war, and you do it with music.",
-      worst: "You defend the status quo against the future itself. You mistake stability for health, you run a secret police against ideas, and 1848 is coming whether you read the pamphlets or not.",
+      worst: "You balance so carefully that you can end up nobody's friend. You stay neutral one time too many, and both sides remember. You keep everyone strong enough to matter, including the neighbour who is quietly growing stronger than you. Pragmatism is your gift, until people start to wonder whether they mean anything to you at all.",
       love: "Protective, strategic and warm in private. You marry for the family and love for yourself, and you are capable of both. You want a partner who respects the house and the rules of the house.",
       work: "The one who runs the committee that runs everything, and never raises their voice. The agenda is yours. So is the seating plan.",
       next: "History's next move: 1848, revolutions in every capital including yours; 1866, Prussia in seven weeks; 1867, the Compromise. You become Austria-Hungary.",

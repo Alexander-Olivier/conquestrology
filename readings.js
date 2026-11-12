@@ -699,7 +699,7 @@ R.austria = {
     "You are organised, pragmatic and very elegant about both. You remember who said what and who is related to whom, and you run a household, a ministry or a continent from the same quiet calendar. You never raise your voice, because you have never needed to: by the time anyone else speaks, you have already counted the votes."
   ],
   best: "The strategist who turns a war into a system. You build the structure others live in, and you keep it in balance so that nobody can knock it over. You get ten people who hate each other to agree on something by making each of them feel it was their own idea. When you are at your best, wars simply fail to happen, and a whole continent runs on your timetable without quite noticing.",
-  worst: "You defend the way things are against the future itself. You mistake stability for health. You would like the young people to stop reading whatever it is they are reading, and you have someone looking into it. You can be so sure that order is kindness that you never ask those being ordered about how they feel.",
+  worst: "You balance so carefully that you can end up nobody's friend. You stay neutral one time too many, and both sides remember. You keep everyone strong enough to matter, including the neighbour who is quietly growing stronger than you. Pragmatism is your gift, until people start to wonder whether they mean anything to you at all.",
   love: [
     "Protective, strategic and warm in private. You marry for the family and love for yourself, and you are capable of both, sometimes with different people. Your wedding is a work of diplomatic art, the two families have been negotiating it for years, and the two of you turn out, to everyone's surprise, to really like each other.",
     "You want a partner who respects the house and the rules of the house. You show affection by arranging things: the introduction, the right school, the villa for August. Be careful, when your children come to you with a mad and passionate idea, not to treat it as a security matter."
@@ -718,8 +718,8 @@ R.austria = {
     "Enjoy it. You have earned this, and you are very good at hosting. The one thing to watch is that you have started to take the current arrangement as the natural order of the world. Somewhere near you, a young person is reading something, and you have had an urge to have a word with them."
   ],
   next: [
-    "The system held. There was no general European war for almost a century, a record that is still hard to credit. But Metternich spent thirty years censoring, spying and policing the universities, and in March 1848 the crowds came for him too, and he fled to London. Prussia beat Austria in seven weeks in 1866, and in 1867 you became Austria-Hungary. There is a card for that.",
-    "You have about thirty quiet years. Use them. The peace is yours, and it is a real achievement. It will last longer if you let a few windows open, on purpose, before someone comes along and breaks them."
+    "The next few years are yours. People will bring you their disputes, their deals and their seating plans, and the arrangement you have built will carry everyone further than they expect. Vienna's peace held for thirty years. Yours can too, and it is a real achievement, so let yourself enjoy it.",
+    "The danger is not a rival. It is the day someone close to you wants something your arrangement has no seat for: a new job, a new partner, a new idea. When that day comes, make room before you are asked. Vienna waited, and in 1848 the crowds came to the door. You can open it yourself."
   ]
 };
 
