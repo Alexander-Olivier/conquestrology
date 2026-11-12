@@ -396,7 +396,7 @@ window.EMPIRE_MOMENTS = (function () {
     {
       id: "austria", t: "W", m: "C", state: "high",
       name: "The Austrian Empire", full: "The Austrian Empire", moment: "Austria in 1815", mapKey: "austria", flagKey: "austria",
-      epithet: "Lost every battle, hosted the peace, and won the century.",
+      epithet: "Why win a battle when you can write the treaty?",
       dates: "1804 to 1867", color: "#c9a227", flagRatio: "3 / 2",
       capital: "Vienna", peak: "1815, the Congress of Vienna, everyone at your table", lasted: "63 years, and the map of Europe until 1914",
       resource: "Marriage", patron: "Metternich", century: "The nineteenth, first half",
